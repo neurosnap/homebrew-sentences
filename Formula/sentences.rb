@@ -1,15 +1,24 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class English < Formula
+class Sentences < Formula
   desc "A multilingual command line sentence tokenizer"
   homepage "https://sentences-231000.appspot.com/"
   url "https://github.com/neurosnap/sentences/releases/download/v1.0.8/sentences_darwin-amd64.tar.gz"
   sha256 "4a354969b189e4f0738e6e36f1cefae11f98b30467768be8fddc211c86cfd394"
   license "MIT"
+  version "1.0.8"
+
+  bottle :unneeded
 
   def install
-    system "./configure", *std_configure_args, "--disable-silent-rules"
+      libexec.install Dir["*"]
+      bin.install_symlink("#{libexec}/sentences")
+  end
+
+  def caveats; <<~EOS
+      Executable is linked as "sentences".
+      EOS
   end
 
   test do
