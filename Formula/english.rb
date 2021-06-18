@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class Sentences < Formula
+class English < Formula
   desc "A multilingual command line sentence tokenizer"
   homepage "https://sentences-231000.appspot.com/"
   url "https://github.com/neurosnap/sentences/releases/download/v1.0.8/sentences_darwin-amd64.tar.gz"
