@@ -1,11 +1,12 @@
-# Neurosnap Sentences
+# homebrew package for sentences
 
-## How do I install these formulae?
+```bash
+brew install neurosnap/sentences/sentences
+```
 
-`brew install neurosnap/sentences/<formula>`
-
-Or `brew tap neurosnap/sentences` and then `brew install <formula>`.
-
-## Documentation
+```bash
+brew tap neurosnap/sentences
+brew install sentences
+```
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
