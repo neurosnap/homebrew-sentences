@@ -1,10 +1,18 @@
 class Sentences < Formula
-  desc "A multilingual command line sentence tokenizer"
-  homepage "https://sentences-231000.appspot.com/"
-  url "https://github.com/neurosnap/sentences/releases/download/v1.0.12/sentences_linux-amd64.tar.gz"
-  sha256 "0594405991d0e88f0e53ce44b91462f3cf23d93fc3b23adbe811e1c79b18bd76"
+  desc "A command line sentence tokenizer"
+  homepage "https://sentences-231000.appspot.com"
   license "MIT"
-  version "1.0.12"
+  version "1.1.1"
+
+  on_arm do
+    url "https://github.com/neurosnap/sentences/releases/download/v1.1.1/sentences_darwin-arm64.tar.gz"
+    sha256 "078762aa6a92e4fca013c8163e65ebd7f6cde6425a617df5accc57c777abe76b"
+  end
+
+  on_intel do
+    url "https://github.com/neurosnap/sentences/releases/download/v1.1.1/sentences_darwin-amd64.tar.gz"
+    sha256 "5ffa6695e70510b97d7c6f84672039b7d797957ab0e663ce68605fc1a2c94531"
+  end
 
   def install
       libexec.install Dir["*"]
